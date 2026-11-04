@@ -27,6 +27,14 @@ class ProtocolTests(unittest.TestCase):
   self.assertEqual(a,b)
  def test_install_defaults_all_eight_without_launching(self):
   with patch('benchkit.install.install') as install:self.assertEqual(main(['install']),0);self.assertEqual(set(install.call_args.args[1]),set(TOOLS))
+ def test_install_explicit_subset_keeps_requested_order(self):
+  with patch('benchkit.install.install') as install:
+   self.assertEqual(main(['install','zindex','cobs']),0)
+   self.assertEqual(install.call_args.args[1],['zindex','cobs'])
+ def test_install_rejects_unknown_tool_before_launching(self):
+  with patch('benchkit.install.install') as install,contextlib.redirect_stderr(io.StringIO()):
+   with self.assertRaises(SystemExit) as failure:main(['install','unknown-tool'])
+   self.assertEqual(failure.exception.code,2);install.assert_not_called()
  def test_dry_run_order_sizes_before_doubling(self):
   with tempfile.TemporaryDirectory() as t,contextlib.redirect_stdout(io.StringIO()) as out:
    runner.run(Path(t),'refseq',[128,64],[8],['dense','minimizers'],['zindex','cobs'],dry_run=True)

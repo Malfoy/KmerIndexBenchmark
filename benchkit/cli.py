@@ -12,13 +12,18 @@ def doctor(work):
   if not present:missing.append(name)
  print('Native tools are pinned in configs/tools.lock.json. Rust>=1.89 is required to compile the frozen Zindex source.')
  return int(bool(missing) or sys.version_info<(3,11,8))
+def install_tool(value):
+ allowed=(*TOOLS,'kmtricks')
+ if value not in allowed:raise argparse.ArgumentTypeError('Unknown tool '+repr(value)+'; choose from '+', '.join(allowed))
+ return value
+
 def main(argv=None):
  parser=argparse.ArgumentParser(prog='./bench',description='Install and reproduce the Zindex paper bacterial benchmarks.')
  parser.add_argument('--workdir',type=Path,default=Path(os.environ.get('BENCH_WORKDIR',ROOT/'work')),help='Downloads, installed tools, logs and results (default: ./work). Put this on a large disk.')
  sub=parser.add_subparsers(dest='command',required=True)
  sub.add_parser('doctor',help='Check installation prerequisites and available CPUs')
  sub.add_parser('datasets',help='Show frozen collections and available sizes')
- p=sub.add_parser('install',help='Install all tools, or only the named tools, under the work directory');p.add_argument('tools',nargs='*',choices=[*TOOLS,'kmtricks'])
+ p=sub.add_parser('install',help='Install all tools, or only the named tools, under the work directory');p.add_argument('tools',nargs='*',type=install_tool,metavar='TOOL',help='Optional tool names; omitting them installs all eight tools')
  p=sub.add_parser('download',help='Download only missing genomes; preserve compression and accession order');p.add_argument('collection',choices=['refseq','atb']);p.add_argument('--size',type=int,default=64)
  p=sub.add_parser('run',help='Run every selected tool at each size before growing; preserve results and clean indexes');p.add_argument('collection',choices=['refseq','atb']);p.add_argument('--sizes',type=int,nargs='+',default=[64]);p.add_argument('--bits',type=int,nargs='+',choices=[4,8,16],default=[8]);p.add_argument('--mode',choices=['dense','minimizers','both'],default='both');p.add_argument('--tools',nargs='+',choices=TOOLS,default=list(TOOLS));p.add_argument('--keep-indexes',action='store_true');p.add_argument('--keep-prepared',action='store_true',help='Retain externally computed minimizer FASTAs after each collection size');p.add_argument('--max-ram-gb',type=float,default=48,help='Explicit sampled native RSS budget, decimal GB; 0 disables this guard (recorded)');p.add_argument('--disk-reserve-gb',type=float,default=2);p.add_argument('--planner',choices=['streaming','full','naive'],help='Optional Zindex construction comparison; use separate --workdir values');p.add_argument('--dry-run',action='store_true',help='Print the queue without installing, downloading or running tools')
  p=sub.add_parser('results',help='Show measured results without rerunning');p.add_argument('--paper',action='store_true')
