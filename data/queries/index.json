@@ -1,0 +1,71 @@
+{
+  "refseq/64": {
+    "metadata": "data/queries/refseq-64.json.gz"
+  },
+  "refseq/128": {
+    "metadata": "data/queries/refseq-128.json.gz"
+  },
+  "refseq/256": {
+    "metadata": "data/queries/refseq-256.json.gz"
+  },
+  "refseq/512": {
+    "metadata": "data/queries/refseq-512.json.gz"
+  },
+  "refseq/1024": {
+    "metadata": "data/queries/refseq-1024.json.gz"
+  },
+  "refseq/2048": {
+    "metadata": "data/queries/refseq-2048.json.gz"
+  },
+  "refseq/4096": {
+    "metadata": "data/queries/refseq-4096.json.gz"
+  },
+  "refseq/8192": {
+    "metadata": "data/queries/refseq-8192.json.gz"
+  },
+  "refseq/16384": {
+    "metadata": "data/queries/refseq-16384.json.gz"
+  },
+  "refseq/32768": {
+    "reuse": "refseq/16384"
+  },
+  "refseq/65536": {
+    "reuse": "refseq/16384"
+  },
+  "refseq/131072": {
+    "reuse": "refseq/16384"
+  },
+  "atb/64": {
+    "metadata": "data/queries/atb-64.json.gz"
+  },
+  "atb/128": {
+    "metadata": "data/queries/atb-128.json.gz"
+  },
+  "atb/256": {
+    "metadata": "data/queries/atb-256.json.gz"
+  },
+  "atb/512": {
+    "metadata": "data/queries/atb-512.json.gz"
+  },
+  "atb/1024": {
+    "metadata": "data/queries/atb-1024.json.gz"
+  },
+  "atb/2048": {
+    "metadata": "data/queries/atb-2048.json.gz"
+  },
+  "atb/4096": {
+    "metadata": "data/queries/atb-4096.json.gz"
+  },
+  "atb/8192": {
+    "metadata": "data/queries/atb-8192.json.gz"
+  },
+  "atb/16384": {
+    "metadata": "data/queries/atb-16384.json.gz"
+  },
+  "atb/32768": {
+    "metadata": "data/queries/atb-32768.json.gz"
+  },
+  "atb/65536": {
+    "metadata": "data/queries/atb-65536.json.gz"
+  }
+}

@@ -1,0 +1,31 @@
+name: Optional native installation check
+on:
+  workflow_dispatch:
+    inputs:
+      tool:
+        description: Tool to build or download (installation can take several minutes)
+        required: true
+        default: zindex
+        type: choice
+        options: [zindex, cobs, raptor, kmindex, kaminari, fulgor, metagraph, themisto]
+jobs:
+  install:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: sudo apt-get update && sudo apt-get install -y build-essential cmake git pkg-config time pigz zlib1g-dev libbz2-dev liblzma-dev libzstd-dev libjemalloc-dev
+      - run: rustup toolchain install 1.89.0 --profile minimal && rustup default 1.89.0
+      - run: ./bench doctor
+      - env:
+          SELECTED_TOOL: ${{ inputs.tool }}
+        run: ./bench install "$SELECTED_TOOL"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: install-evidence
+          path: |
+            work/logs/install/
+            work/tools/*.json

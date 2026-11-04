@@ -1,0 +1,295 @@
+{
+  "bits": 16,
+  "target_fpr": 1.52587890625e-05,
+  "k": 31,
+  "window": 19,
+  "query_length": 1000,
+  "query_ratio": 0.8,
+  "query_repetitions": 1,
+  "parameters": {
+    "dense": {
+      "cobs": {
+        "hashes": 16,
+        "target_fpr": 1.52587890625e-05
+      },
+      "raptor": {
+        "hashes": 5,
+        "target_fpr": 1.52587890625e-05
+      },
+      "kaminari": {
+        "kaminari_m": 30,
+        "kaminari_bits": 16,
+        "canonical": true,
+        "seed": 42,
+        "pthash_constant": 4
+      },
+      "kmindex": {
+        "bits": 327658625949,
+        "z": 0,
+        "analytic_not_empirically_frozen": true
+      },
+      "zindex": {
+        "hashes": 4,
+        "fingerprint_bits": 16,
+        "seed": 69,
+        "slot_scale": 1,
+        "merge_planner": "streaming",
+        "merge_column_order": "compression",
+        "merge_sketch_size": 4096,
+        "merge_max_colors": 48,
+        "merge_min_saving": 0,
+        "merge_plan_margin": 0,
+        "min_subindex_documents": 1,
+        "segment_length": 64,
+        "max_ram_gb": 48,
+        "max_subindex_size": "8GiB",
+        "low_disk": false
+      }
+    },
+    "minimizers": {
+      "cobs": {
+        "hashes": 16,
+        "target_fpr": 1.52587890625e-05
+      },
+      "raptor": {
+        "hashes": 5,
+        "target_fpr": 1.52587890625e-05
+      },
+      "kaminari": {
+        "kaminari_m": 30,
+        "kaminari_bits": 16,
+        "canonical": true,
+        "seed": 42,
+        "pthash_constant": 4
+      },
+      "kmindex": {
+        "bits": 32736489675,
+        "z": 0,
+        "analytic_not_empirically_frozen": true
+      },
+      "zindex": {
+        "hashes": 4,
+        "fingerprint_bits": 16,
+        "seed": 69,
+        "slot_scale": 1,
+        "merge_planner": "streaming",
+        "merge_column_order": "compression",
+        "merge_sketch_size": 4096,
+        "merge_max_colors": 48,
+        "merge_min_saving": 0,
+        "merge_plan_margin": 0,
+        "min_subindex_documents": 1,
+        "segment_length": 64,
+        "max_ram_gb": 48,
+        "max_subindex_size": "8GiB",
+        "low_disk": false
+      }
+    }
+  },
+  "accuracy": {
+    "dense": {
+      "cobs": {
+        "tp": 100000,
+        "fp": 291,
+        "fn": 0,
+        "tn": 19999709,
+        "negative_pairs": 20000000,
+        "positive_pairs": 100000,
+        "fpr": 1.455e-05,
+        "fnr": 0.0,
+        "fpr_wilson95": [
+          1.2971538473555922e-05,
+          1.632053590002243e-05
+        ],
+        "fnr_wilson95": [
+          0,
+          3.8414524267635735e-05
+        ],
+        "ci_overlaps_practical_band": true,
+        "practical_near_target": true,
+        "duplicate_column_mismatches": 0,
+        "evaluated_color": 0,
+        "reference_copies": 1,
+        "false_negative_policy": "Accuracy measurement only; not an execution or acceptance failure",
+        "scope": "Individual canonical31mer membership on fixed standalone5Mb reference; no collection FPR/FNR inference"
+      },
+      "raptor": {
+        "tp": 100000,
+        "fp": 310,
+        "fn": 0,
+        "tn": 19999690,
+        "negative_pairs": 20000000,
+        "positive_pairs": 100000,
+        "fpr": 1.55e-05,
+        "fnr": 0.0,
+        "fpr_wilson95": [
+          1.3867911896828754e-05,
+          1.732416211179767e-05
+        ],
+        "fnr_wilson95": [
+          0,
+          3.8414524267635735e-05
+        ],
+        "ci_overlaps_practical_band": true,
+        "practical_near_target": true,
+        "duplicate_column_mismatches": 0,
+        "evaluated_color": 0,
+        "reference_copies": 1,
+        "false_negative_policy": "Accuracy measurement only; not an execution or acceptance failure",
+        "scope": "Individual canonical31mer membership on fixed standalone5Mb reference; no collection FPR/FNR inference"
+      },
+      "kaminari": {
+        "tp": 100000,
+        "fp": 299,
+        "fn": 0,
+        "tn": 19999701,
+        "negative_pairs": 20000000,
+        "positive_pairs": 100000,
+        "fpr": 1.495e-05,
+        "fnr": 0.0,
+        "fpr_wilson95": [
+          1.3348752324023811e-05,
+          1.6743321895890574e-05
+        ],
+        "fnr_wilson95": [
+          0,
+          3.8414524267635735e-05
+        ],
+        "ci_overlaps_practical_band": true,
+        "practical_near_target": true,
+        "duplicate_column_mismatches": 0,
+        "evaluated_color": 0,
+        "reference_copies": 2,
+        "false_negative_policy": "Accuracy measurement only; not an execution or acceptance failure",
+        "scope": "Individual canonical31mer membership on fixed standalone5Mb reference; no collection FPR/FNR inference"
+      },
+      "zindex": {
+        "tp": 100000,
+        "fp": 278,
+        "fn": 0,
+        "tn": 19999722,
+        "negative_pairs": 20000000,
+        "positive_pairs": 100000,
+        "fpr": 1.39e-05,
+        "fnr": 0.0,
+        "fpr_wilson95": [
+          1.2359242412876808e-05,
+          1.5632832210405503e-05
+        ],
+        "fnr_wilson95": [
+          0,
+          3.8414524267635735e-05
+        ],
+        "ci_overlaps_practical_band": true,
+        "practical_near_target": true,
+        "duplicate_column_mismatches": 0,
+        "evaluated_color": 0,
+        "reference_copies": 1,
+        "false_negative_policy": "Accuracy measurement only; not an execution or acceptance failure",
+        "scope": "Individual canonical31mer membership on fixed standalone5Mb reference; no collection FPR/FNR inference"
+      }
+    },
+    "minimizers": {
+      "cobs": {
+        "tp": 100000,
+        "fp": 262,
+        "fn": 0,
+        "tn": 19999738,
+        "negative_pairs": 20000000,
+        "positive_pairs": 100000,
+        "fpr": 1.31e-05,
+        "fnr": 0.0,
+        "fpr_wilson95": [
+          1.1606874871805347e-05,
+          1.4785200058804904e-05
+        ],
+        "fnr_wilson95": [
+          0,
+          3.8414524267635735e-05
+        ],
+        "ci_overlaps_practical_band": true,
+        "practical_near_target": true,
+        "duplicate_column_mismatches": 0,
+        "evaluated_color": 0,
+        "reference_copies": 1,
+        "false_negative_policy": "Accuracy measurement only; not an execution or acceptance failure",
+        "scope": "Individual canonical31mer membership on fixed standalone5Mb reference; no collection FPR/FNR inference"
+      },
+      "raptor": {
+        "tp": 100000,
+        "fp": 326,
+        "fn": 0,
+        "tn": 19999674,
+        "negative_pairs": 20000000,
+        "positive_pairs": 100000,
+        "fpr": 1.63e-05,
+        "fnr": 0.0,
+        "fpr_wilson95": [
+          1.462401104903875e-05,
+          1.8168062652259733e-05
+        ],
+        "fnr_wilson95": [
+          0,
+          3.8414524267635735e-05
+        ],
+        "ci_overlaps_practical_band": true,
+        "practical_near_target": true,
+        "duplicate_column_mismatches": 0,
+        "evaluated_color": 0,
+        "reference_copies": 1,
+        "false_negative_policy": "Accuracy measurement only; not an execution or acceptance failure",
+        "scope": "Individual canonical31mer membership on fixed standalone5Mb reference; no collection FPR/FNR inference"
+      },
+      "kaminari": {
+        "tp": 100000,
+        "fp": 309,
+        "fn": 0,
+        "tn": 19999691,
+        "negative_pairs": 20000000,
+        "positive_pairs": 100000,
+        "fpr": 1.545e-05,
+        "fnr": 0.0,
+        "fpr_wilson95": [
+          1.3820692790855814e-05,
+          1.7271381236978606e-05
+        ],
+        "fnr_wilson95": [
+          0,
+          3.8414524267635735e-05
+        ],
+        "ci_overlaps_practical_band": true,
+        "practical_near_target": true,
+        "duplicate_column_mismatches": 0,
+        "evaluated_color": 0,
+        "reference_copies": 2,
+        "false_negative_policy": "Accuracy measurement only; not an execution or acceptance failure",
+        "scope": "Individual canonical31mer membership on fixed standalone5Mb reference; no collection FPR/FNR inference"
+      },
+      "zindex": {
+        "tp": 100000,
+        "fp": 280,
+        "fn": 0,
+        "tn": 19999720,
+        "negative_pairs": 20000000,
+        "positive_pairs": 100000,
+        "fpr": 1.4e-05,
+        "fnr": 0.0,
+        "fpr_wilson95": [
+          1.2453385473775579e-05,
+          1.5738689111090738e-05
+        ],
+        "fnr_wilson95": [
+          0,
+          3.8414524267635735e-05
+        ],
+        "ci_overlaps_practical_band": true,
+        "practical_near_target": true,
+        "duplicate_column_mismatches": 0,
+        "evaluated_color": 0,
+        "reference_copies": 1,
+        "false_negative_policy": "Accuracy measurement only; not an execution or acceptance failure",
+        "scope": "Individual canonical31mer membership on fixed standalone5Mb reference; no collection FPR/FNR inference"
+      }
+    }
+  }
+}

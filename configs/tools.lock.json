@@ -1,0 +1,57 @@
+{
+  "kaminari": {
+    "repo": "https://github.com/yhhshb/kaminari.git",
+    "commit": "305f2c5b803f458df3caf01710cfc97bec79e4b8",
+    "argparse_commit": "ef92a8523e523f49afeff660805ecde4ee937497",
+    "patches": [
+      {
+        "file": "patches/kaminari-minimizers-single-merge.patch",
+        "directory": "bundled/Minimizers",
+        "sha256": "cbe87a28489308e6cea7d46cacdf6fae1575b89e63b56228147e2bc16fc3d6c7"
+      }
+    ]
+  },
+  "fulgor": {
+    "repo": "https://github.com/jermp/fulgor.git",
+    "commit": "ef6541952c1153c1b7b4bfa00aadbf741a340eff"
+  },
+  "cobs": {
+    "version": "v0.3.1",
+    "url": "https://github.com/iqbal-lab-org/cobs/releases/download/v0.3.1/cobs-0.3.1.tar.gz",
+    "sha256": "181cda165d2fd8633b9f9de96b7a6f00d5994effe37ffaf7734e428f83d29d5d"
+  },
+  "kmindex": {
+    "version": "v0.6.1",
+    "url": "https://github.com/tlemane/kmindex/releases/download/v0.6.1/kmindex-v0.6.1-Linux-x86_64.tar.gz",
+    "sha256": "9deb546007770878b7e8bd76058af95f818416c9dcbe9763b6e8a088509be4ad"
+  },
+  "kmtricks": {
+    "version": "v1.6.0",
+    "url": "https://github.com/tlemane/kmtricks/releases/download/v1.6.0/kmtricks-v1.6.0-Linux-x86_64.tar.gz",
+    "sha256": "604882c3d22a55a80b4c1618657a9c85135436a502b5b74c908edf1376d3fb93"
+  },
+  "metagraph": {
+    "version": "v0.5.2",
+    "url": "https://github.com/ratschlab/metagraph/releases/download/v0.5.2/metagraph_DNA",
+    "sha256": "ef868988817763589d4189288e918c9c76a7ac730cab79de9f2cf48d3cbb27da"
+  },
+  "themisto": {
+    "version": "v3.2.2",
+    "url": "https://github.com/algbio/themisto/releases/download/v3.2.2/themisto_linux-v3.2.2.tar.gz",
+    "sha256": "1ae148e2eff478ad444da61c5b43f8293ea9c52b72940c7aadd610a0f01217d0"
+  },
+  "raptor": {
+    "repo": "https://github.com/seqan/raptor.git",
+    "commit": "01b8afc0ced404b036bece173f137f53a777ca51",
+    "version": "3.0.1"
+  },
+  "zindex": {
+    "repo": "https://github.com/Malfoy/Zindex.git",
+    "commit": "fe0a333eecbbd256d3b90e509bcb6dd8a977e4a1",
+    "source_archive": "vendor/zindex-paper-source.tar.gz",
+    "sha256": "94b4e7ff95ffea6c5c4540eb31287a850cbdccb7f3f5975c436d281676970736",
+    "source_note": "Frozen source including naive planner, matching the latest five supplementary series. RefSeq8 uses the earlier equivalent query implementation (2935).",
+    "paper_binary_sha256": "493df20a08446bb8ff9a456d08c2c40f3dd07b393c5ecc702b601b215ca77a22",
+    "archive_note": "Documentation link cleanup; executable sources unchanged."
+  }
+}

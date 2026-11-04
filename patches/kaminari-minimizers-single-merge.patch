@@ -1,0 +1,13 @@
+diff --git a/lib/BreiZHMinimizer.cpp b/lib/BreiZHMinimizer.cpp
+--- a/lib/BreiZHMinimizer.cpp
++++ b/lib/BreiZHMinimizer.cpp
+@@ -382,6 +382,9 @@
+         vrac_names.push_back( single );
+         skip_final_merge = true;
+     }
++    // A complete second-stage merge (e.g. 128 inputs) also leaves one dense file.
++    // There is no second file to split/merge, but this file still needs sorting.
++    if (vrac_names.size() == 1) skip_final_merge = true;
+ 
+ 
+     for(size_t i = 0; i < vrac_names.size(); i += 1) {

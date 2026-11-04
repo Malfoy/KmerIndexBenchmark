@@ -1,0 +1,50 @@
+{
+  "exported_utc": "2026-11-04T14:44:52.265658+00:00",
+  "source_plot_sha256": "83214acc301d31e81805a3e6e3fb8528c1734d12f7b0e4d287aa6c9493632894",
+  "paper_data_rows": 523,
+  "manifest_sources": {
+    "refseq": {
+      "source": "campaigns/refseq-extension-131072-20261102/data/n131072/samples.tsv",
+      "source_sha256": "9679da2cc4fcce4ff624c6905156e0932895756a44197c8f11aea8bbce9c3d08",
+      "genomes": 131072,
+      "sizes": [
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384,
+        32768,
+        65536,
+        131072
+      ],
+      "accession_type": "versioned RefSeq assembly accession",
+      "nested_prefixes_verified": true,
+      "seed": 42
+    },
+    "atb": {
+      "source": "campaigns/atb-random-growth-20261021/points/n65536/data/manifest.tsv",
+      "source_sha256": "a867d540ef124ec075b6d4ffde8dd694573c91b7eefa773a5b267890d783b5ba",
+      "genomes": 65536,
+      "sizes": [
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384,
+        32768,
+        65536
+      ],
+      "accession_type": "ATB BioSample identifier used as public object key",
+      "nested_prefixes_verified": true,
+      "seed": 20261021
+    }
+  }
+}

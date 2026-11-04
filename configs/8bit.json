@@ -1,0 +1,181 @@
+{
+  "bits": 8,
+  "target_fpr": 0.00390625,
+  "k": 31,
+  "window": 19,
+  "query_length": 1000,
+  "query_ratio": 0.8,
+  "query_repetitions": 1,
+  "parameters": {
+    "dense": {
+      "cobs": {
+        "bloom_fpr": 0.00390625,
+        "cobs_hashes": 8
+      },
+      "raptor": {
+        "bloom_fpr": 0.00390625,
+        "raptor_hashes": 5
+      },
+      "kaminari": {
+        "kaminari_m": 30,
+        "kaminari_bits": 8
+      },
+      "kmindex": {
+        "bits": 1277424786,
+        "z": 0
+      },
+      "zindex": {
+        "hashes": 8,
+        "fingerprint_bits": 8,
+        "seed": 69,
+        "slot_scale": 1,
+        "merge_planner": "streaming",
+        "merge_column_order": "compression",
+        "merge_sketch_size": 4096,
+        "merge_max_colors": 48,
+        "merge_min_saving": 0,
+        "merge_plan_margin": 0,
+        "min_subindex_documents": 1,
+        "segment_length": 64,
+        "max_ram_gb": 48,
+        "max_subindex_size": "8GiB",
+        "low_disk": false
+      }
+    },
+    "minimizers": {
+      "cobs": {
+        "bloom_fpr": 0.00390625,
+        "cobs_hashes": 8
+      },
+      "raptor": {
+        "bloom_fpr": 0.00390625,
+        "raptor_hashes": 5
+      },
+      "kaminari": {
+        "kaminari_m": 30,
+        "kaminari_bits": 8
+      },
+      "kmindex": {
+        "bits": 127627964,
+        "z": 0
+      },
+      "zindex": {
+        "hashes": 8,
+        "fingerprint_bits": 8,
+        "seed": 69,
+        "slot_scale": 1,
+        "merge_planner": "streaming",
+        "merge_column_order": "compression",
+        "merge_sketch_size": 4096,
+        "merge_max_colors": 48,
+        "merge_min_saving": 0,
+        "merge_plan_margin": 0,
+        "min_subindex_documents": 1,
+        "segment_length": 64,
+        "max_ram_gb": 48,
+        "max_subindex_size": "8GiB",
+        "low_disk": false
+      }
+    }
+  },
+  "accuracy": {
+    "dense": {
+      "cobs": {
+        "tp": 100000,
+        "fp": 3756,
+        "fn": 0,
+        "tn": 996244,
+        "positive_pairs": 100000,
+        "negative_pairs": 1000000,
+        "fpr": 0.003756,
+        "fnr": 0.0,
+        "standalone_genome": true
+      },
+      "raptor": {
+        "tp": 100000,
+        "fp": 3775,
+        "fn": 0,
+        "tn": 996225,
+        "positive_pairs": 100000,
+        "negative_pairs": 1000000,
+        "fpr": 0.003775,
+        "fnr": 0.0,
+        "standalone_genome": true
+      },
+      "kaminari": {
+        "tp": 100000,
+        "fp": 3882,
+        "fn": 0,
+        "tn": 996118,
+        "positive_pairs": 100000,
+        "negative_pairs": 1000000,
+        "fpr": 0.003882,
+        "fnr": 0.0,
+        "reference_copies": 2,
+        "evaluated_color": 0,
+        "duplicate_column_mismatches": 0,
+        "accuracy_scope": "Standalone duplicate-genome index; per-genome membership of first copy; both copy predictions verified identical"
+      },
+      "kmindex": {
+        "tp": 100000,
+        "fp": 3791,
+        "fn": 0,
+        "tn": 996209,
+        "positive_pairs": 100000,
+        "negative_pairs": 1000000,
+        "fpr": 0.003791,
+        "fnr": 0.0,
+        "standalone_genome": true
+      }
+    },
+    "minimizers": {
+      "cobs": {
+        "tp": 100000,
+        "fp": 3732,
+        "fn": 0,
+        "tn": 996268,
+        "positive_pairs": 100000,
+        "negative_pairs": 1000000,
+        "fpr": 0.003732,
+        "fnr": 0.0,
+        "standalone_genome": true
+      },
+      "raptor": {
+        "tp": 100000,
+        "fp": 3941,
+        "fn": 0,
+        "tn": 996059,
+        "positive_pairs": 100000,
+        "negative_pairs": 1000000,
+        "fpr": 0.003941,
+        "fnr": 0.0,
+        "standalone_genome": true
+      },
+      "kaminari": {
+        "tp": 100000,
+        "fp": 3945,
+        "fn": 0,
+        "tn": 996055,
+        "positive_pairs": 100000,
+        "negative_pairs": 1000000,
+        "fpr": 0.003945,
+        "fnr": 0.0,
+        "reference_copies": 2,
+        "evaluated_color": 0,
+        "duplicate_column_mismatches": 0,
+        "accuracy_scope": "Standalone duplicate-genome index; per-genome membership of first copy; both copy predictions verified identical"
+      },
+      "kmindex": {
+        "tp": 100000,
+        "fp": 3921,
+        "fn": 0,
+        "tn": 996079,
+        "positive_pairs": 100000,
+        "negative_pairs": 1000000,
+        "fpr": 0.003921,
+        "fnr": 0.0,
+        "standalone_genome": true
+      }
+    }
+  }
+}

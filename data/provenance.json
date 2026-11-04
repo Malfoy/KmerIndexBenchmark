@@ -1,0 +1,77 @@
+{
+  "collections": {
+    "refseq": {
+      "source": "campaigns/refseq-extension-131072-20261102/data/n131072/samples.tsv",
+      "source_sha256": "9679da2cc4fcce4ff624c6905156e0932895756a44197c8f11aea8bbce9c3d08",
+      "genomes": 131072,
+      "sizes": [
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384,
+        32768,
+        65536,
+        131072
+      ],
+      "accession_type": "versioned RefSeq assembly accession",
+      "nested_prefixes_verified": true,
+      "seed": 42
+    },
+    "atb": {
+      "source": "campaigns/atb-random-growth-20261021/points/n65536/data/manifest.tsv",
+      "source_sha256": "a867d540ef124ec075b6d4ffde8dd694573c91b7eefa773a5b267890d783b5ba",
+      "genomes": 65536,
+      "sizes": [
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192,
+        16384,
+        32768,
+        65536
+      ],
+      "accession_type": "ATB BioSample identifier used as public object key",
+      "nested_prefixes_verified": true,
+      "seed": 20261021
+    }
+  },
+  "query_files": 32,
+  "query_compressed_bytes": 168217992,
+  "no_genome_sequences_bundled": false,
+  "no_benchmark_genome_collections_bundled": true,
+  "standalone_reference": {
+    "color": "2281",
+    "accession": "GCF_003003005.1",
+    "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/003/005/GCF_003003005.1_ASM300300v1/GCF_003003005.1_ASM300300v1_genomic.fna.gz",
+    "sha256": "aa00cb848c2e6aae3a2607a3b28730fa3016e4f6ab82227227fcf6e75b886699",
+    "compressed_md5": "c385ad66455a6ea96894233d22c71f3a",
+    "bases": "4999712",
+    "contigs": "49",
+    "species_taxid": "1750599",
+    "organism_name": "Mongoliibacter ruber",
+    "phylum": "Bacteroidota",
+    "phylum_taxid": "976",
+    "class": "Cytophagia",
+    "class_taxid": "768503",
+    "order": "Cytophagales",
+    "order_taxid": "768507",
+    "family": "Cyclobacteriaceae",
+    "family_taxid": "563798",
+    "genus": "Mongoliibacter",
+    "genus_taxid": "1769735",
+    "actual_bases": 4999712,
+    "nominal_bases": 5000000,
+    "policy": "Closest retained unmodified assembly; same genome for both representations",
+    "file": "data/reference/genome.fasta.gz",
+    "compressed_sha256": "376460a6b808f4a8d9a72854426956d30d0da9baa4af0c129c758f87029bb6dd"
+  }
+}

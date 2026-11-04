@@ -1,0 +1,254 @@
+{
+  "seed": 69,
+  "modes": [
+    {
+      "name": "kmers21",
+      "k": 21,
+      "m": 0,
+      "pattern": null,
+      "strobes": false
+    },
+    {
+      "name": "ocm21",
+      "k": 39,
+      "m": 21,
+      "pattern": null,
+      "strobes": false
+    },
+    {
+      "name": "spaced_E",
+      "k": 25,
+      "m": 0,
+      "pattern": "#####_####_###_####_#####",
+      "strobes": false
+    },
+    {
+      "name": "ocm_spaced_E",
+      "k": 43,
+      "m": 25,
+      "pattern": "#####_####_###_####_#####",
+      "strobes": false
+    },
+    {
+      "name": "randstrobes22",
+      "k": 11,
+      "m": 0,
+      "pattern": null,
+      "strobes": true
+    },
+    {
+      "name": "ocm_randstrobes22",
+      "k": 29,
+      "m": 11,
+      "pattern": null,
+      "strobes": true
+    }
+  ],
+  "conditions": [
+    {
+      "length": 10000,
+      "profile": 0,
+      "rate": 0.0,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 0
+    },
+    {
+      "length": 10000,
+      "profile": 0,
+      "rate": 0.01,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 1
+    },
+    {
+      "length": 10000,
+      "profile": 0,
+      "rate": 0.05,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 2
+    },
+    {
+      "length": 10000,
+      "profile": 0,
+      "rate": 0.1,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 3
+    },
+    {
+      "length": 10000,
+      "profile": 0,
+      "rate": 0.2,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 4
+    },
+    {
+      "length": 10000,
+      "profile": 1,
+      "rate": 0.01,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 5
+    },
+    {
+      "length": 10000,
+      "profile": 1,
+      "rate": 0.05,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 6
+    },
+    {
+      "length": 10000,
+      "profile": 1,
+      "rate": 0.1,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 7
+    },
+    {
+      "length": 10000,
+      "profile": 1,
+      "rate": 0.2,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 8
+    },
+    {
+      "length": 10000,
+      "profile": 2,
+      "rate": 0.01,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 9
+    },
+    {
+      "length": 10000,
+      "profile": 2,
+      "rate": 0.05,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 10
+    },
+    {
+      "length": 10000,
+      "profile": 2,
+      "rate": 0.1,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 11
+    },
+    {
+      "length": 10000,
+      "profile": 2,
+      "rate": 0.2,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 12
+    },
+    {
+      "length": 10000,
+      "profile": 3,
+      "rate": 0.01,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 13
+    },
+    {
+      "length": 10000,
+      "profile": 3,
+      "rate": 0.05,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 14
+    },
+    {
+      "length": 10000,
+      "profile": 3,
+      "rate": 0.1,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 15
+    },
+    {
+      "length": 10000,
+      "profile": 3,
+      "rate": 0.2,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 16
+    },
+    {
+      "length": 10000,
+      "profile": 4,
+      "rate": 0.01,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 17
+    },
+    {
+      "length": 10000,
+      "profile": 4,
+      "rate": 0.05,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 18
+    },
+    {
+      "length": 10000,
+      "profile": 4,
+      "rate": 0.1,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 19
+    },
+    {
+      "length": 10000,
+      "profile": 4,
+      "rate": 0.2,
+      "kind": "technology_iid",
+      "performance": true,
+      "id": 20
+    }
+  ],
+  "profiles": [
+    {
+      "name": "ONT-like",
+      "sid_weights": [
+        39,
+        24,
+        36
+      ]
+    },
+    {
+      "name": "PacBio HiFi-like",
+      "sid_weights": [
+        2,
+        10,
+        13
+      ]
+    }
+  ],
+  "simulation": "Simplified IID error-TYPE mixtures, NOT calibrated platform simulators. Single-base insertions/deletions; no learned context, clustering or chemistry/basecaller-specific model. Same nominal edit-event rate per reference base swept for every profile. High rates are stress tests, not claims about HiFi/ONT accuracy.",
+  "index_parameters": {
+    "hashes": 4,
+    "fingerprint_bits": 8,
+    "slot_scale": 1.0,
+    "cycle_break": "most-deg2",
+    "tie_scan": 8,
+    "merge_planner": "streaming",
+    "merge_column_order": "compression",
+    "merge_sketch_size": 4096,
+    "merge_max_colors": 48,
+    "merge_min_saving": 0,
+    "min_subindex_documents": 128,
+    "abandoned_recovery": true
+  },
+  "timing_definition": "Native record kernel: extraction, lookup, counting, formatting and worker setup; three wall-time repetitions, 32 threads, all 3200 parents at zero error and 1%,5%,10%,20% under each of the five profiles. Excludes input parsing, loading, simulation and correctness verification. Full counts (threshold 0) are the primary figure; threshold .8 retained separately. Coverage-window expansion is an experimental assessment, not a change to CLI scores.",
+  "genome_manifest": "data/manifests/seed-study-32.tsv.gz",
+  "genomes": 32,
+  "original_source_config_sha256": "16b01e2fb4d79da94a4db10511d10ddce7f71edb02d14dc9400724bcbd786aae"
+}

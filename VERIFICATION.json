@@ -1,0 +1,18 @@
+{
+  "verified_utc": "2026-11-04T16:43:35.897573+00:00",
+  "harness_tests": 13,
+  "fixture_dense_and_minimizer_cases": 16,
+  "all8tool_adapters_exercised": true,
+  "original_queries_verified": 32,
+  "accession_prefixes_verified": 23,
+  "refseq_max": 131072,
+  "atb_max": 65536,
+  "frozen_cargo_metadata_valid": true,
+  "paper_eps_generated": 10,
+  "eps_ghostscript_passed": true,
+  "real_indexers_reinstalled_during_active_benchmark": false,
+  "other_bacterial_benchmarks_started": false,
+  "final_cleanup_provenance_test_passed": true,
+  "cobs_scratch_disk_classification_tested": true,
+  "derived_input_cleanup_preserves_all_preparation_reports": true
+}
