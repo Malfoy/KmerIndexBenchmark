@@ -1,4 +1,9 @@
-# Exact datasets
+# Datasets used in the paper
+
+This page documents the frozen collections used in the
+[Zindex paper](https://www.biorxiv.org/content/10.64898/2026.11.05.764633v1).
+The accession lists and compressed manifests can be used independently of the
+[benchmark suite](../README.md#benchmark-suite).
 
 `data/accessions/refseq/N.txt` and `data/accessions/atb/N.txt` contain one
 identifier per line in the exact benchmark order. No header, absolute filesystem
@@ -23,7 +28,7 @@ seeds and original manifest identities are in `data/provenance.json`.
 
 `data/manifests/*.tsv.gz` hold accession, order, download URLs, expected base
 count, taxonomy where recorded, and available sequence/compressed-file digests.
-No original genome collection is bundled. The single fixed4,999,712-base
+No original genome collection is bundled. The single fixed 4,999,712-base
 calibration genome (`GCF_003003005.1`) is included in `data/reference/`. Genomes remain gzip-compressed during
 download and benchmarking.
 
@@ -37,16 +42,16 @@ or a newer assembly version if a URL is unavailable.
 
 The **original compressed query files** are bundled once per distinct file in
 `data/queries/`. The JSON index resolves collection sizes to exact workloads and
-source-color metadata. RefSeq extensions above16k reuse the frozen16k workloads,
-as the actual extension runs did. Query files contain approximately16k positive
-and16k negative 1kb records per experiment; the exact counts are in the metadata.
-This costs about168MB and avoids silently regenerating different reads.
+source-color metadata. RefSeq extensions above 16k reuse the frozen 16k workloads,
+as the actual extension runs did. Query files contain approximately 16k positive
+and 16k negative 1 kb records per experiment; the exact counts are in the metadata.
+This costs about 168 MB and avoids silently regenerating different reads.
 
 Upstream collections: [NCBI RefSeq](https://www.ncbi.nlm.nih.gov/refseq/) and
 [AllTheBacteria](https://github.com/AllTheBacteria/AllTheBacteria). Frozen selection
 identities, rather than their changing current catalogues, define these runs.
 
-The32 RefSeq genomes used in the seed experiment are also listed, in their
+The 32 RefSeq genomes used in the seed experiment are also listed, in their
 original paired order, in `data/accessions/seed-study-32.txt`, with portable
 URLs/taxonomy in the matching manifest. `configs/seed-study.json` preserves its
 error profiles and seed configurations. The bacterial scaling runner and the
